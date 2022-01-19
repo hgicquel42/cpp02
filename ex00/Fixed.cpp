@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:47:36 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 19:01:27 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/19 12:43:14 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed::~Fixed(void)
 Fixed::Fixed(Fixed &from)
 {
 	std::cout << "Copy constructor called" << "\n";
-	*this = from;
+	this->value = from.getRawBits();
 }
 
 void Fixed::operator=(Fixed& from)

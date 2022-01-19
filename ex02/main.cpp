@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:55:37 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 19:24:41 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/19 12:59:57 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,34 @@ int	main(void)
 	std::cout << "c is " << c << "\n";
 	std::cout << "d is " << d << "\n";
 
-	std::cout << "a is " << a.toInt() << " as integer" << "\n";
-	std::cout << "b is " << b.toInt() << " as integer" << "\n";
-	std::cout << "c is " << c.toInt() << " as integer" << "\n";
-	std::cout << "d is " << d.toInt() << " as integer" << "\n";
+	std::cout << "a == b " << ((a == b) ? "true" : "false") << "\n";
+	std::cout << "b == a " << ((b == a) ? "true" : "false") << "\n";
+	std::cout << "a == a " << ((a == a) ? "true" : "false") << "\n";
+	std::cout << "b == b " << ((b == b) ? "true" : "false") << "\n";
+
+	std::cout << "a < b " << ((a < b) ? "true" : "false") << "\n";
+	std::cout << "b < a " << ((b < a) ? "true" : "false") << "\n";
+
+	std::cout << "a <= b " << ((a <= b) ? "true" : "false") << "\n";
+	std::cout << "b <= a " << ((b <= a) ? "true" : "false") << "\n";
+
+	std::cout << "a > b " << ((a > b) ? "true" : "false") << "\n";
+	std::cout << "b > a " << ((b > a) ? "true" : "false") << "\n";
+
+	std::cout << "a >= b " << ((a >= b) ? "true" : "false") << "\n";
+	std::cout << "b >= a " << ((b >= a) ? "true" : "false") << "\n";
+
+	std::cout << "a + b " << (a + b) << "\n";
+	std::cout << "b + a " << (b + a) << "\n";
+
+	std::cout << "a - b " << (a - b) << "\n";
+	std::cout << "b - a " << (b - a) << "\n";
+
+	std::cout << "a * b " << (a * b) << "\n";
+	std::cout << "b * a " << (b * a) << "\n";
+
+	std::cout << "a / b " << (a / b) << "\n";
+	std::cout << "b / a " << (b / a) << "\n";
 
 	return (0);
 }
