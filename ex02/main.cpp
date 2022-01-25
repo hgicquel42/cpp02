@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:55:37 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/19 14:26:33 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:39:22 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(void)
 {
 	Fixed a;
-	Fixed const b(Fixed(5.05f) * Fixed(2));
+	const Fixed b(Fixed(5.05f) * Fixed(2));
 
 	a = Fixed(0.01f);
 
