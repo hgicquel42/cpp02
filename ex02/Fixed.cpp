@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:47:36 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/19 14:18:30 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:29:23 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ Fixed::~Fixed(void)
 
 Fixed::Fixed(Fixed const &from)
 {
-	this->value = from.getRawBits();
+	(*this) = from;
 }
 
-Fixed::Fixed(int value):
+Fixed::Fixed(const int value):
 	value(value << this->bits)
 {}
 
-Fixed::Fixed(float value):
+Fixed::Fixed(const float value):
 	value(roundf(value * (1 << this->bits)))
 {}
 

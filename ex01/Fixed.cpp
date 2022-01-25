@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:47:36 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 13:19:42 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:30:23 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << "\n";
 }
 
-Fixed::Fixed(Fixed const &from)
+Fixed::Fixed(const Fixed& from)
 {
 	std::cout << "Copy constructor called" << "\n";
 	(*this) = from;
@@ -45,7 +45,7 @@ Fixed::Fixed(const float value):
 	std::cout << "Float constructor called" << "\n";
 }
 
-void	Fixed::operator=(Fixed const &from)
+void	Fixed::operator=(const Fixed& from)
 {
 	std::cout << "Copy assignment operator called" << "\n";
 	this->raw = from.getRawBits();
@@ -56,7 +56,7 @@ int	Fixed::getRawBits(void) const
 	return (this->raw);
 }
 
-void	Fixed::setRawBits(int const raw)
+void	Fixed::setRawBits(const int raw)
 {
 	this->raw = raw;
 }
@@ -71,7 +71,7 @@ float	Fixed::toFloat(void) const
 	return ((float) this->raw / (float) (1 << this->bits));
 }
 
-std::ostream&	operator<<(std::ostream &os, Fixed const &it)
+std::ostream&	operator<<(std::ostream &os, const Fixed& it)
 {
 	os << it.toFloat();
 	return (os);
