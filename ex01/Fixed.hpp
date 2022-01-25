@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:42:58 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 19:23:02 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 12:21:43 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 class Fixed
 {
 	private:
-		int					value;
+		int					raw;
 		static const int	bits;
 	public:	
 		Fixed(void);
@@ -26,7 +26,7 @@ class Fixed
 		Fixed(float value);
 		void 	operator=(Fixed const &from);
 		int		getRawBits(void) const;
-		void	setRawBits(int value);
+		void	setRawBits(int const raw);
 		int		toInt(void) const;
 		float	toFloat(void) const;
 };
