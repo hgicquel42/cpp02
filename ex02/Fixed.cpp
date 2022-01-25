@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:47:36 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 13:39:14 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:45:06 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,7 +176,6 @@ Fixed	&Fixed::min(Fixed &a, Fixed &b)
 	else
 		return (b);
 }
-
 
 std::ostream&	operator<<(std::ostream &os, const Fixed& it)
 {

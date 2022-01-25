@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:42:58 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/19 18:30:49 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:46:02 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,38 @@
 class Fixed
 {
 	private:
-		int					value;
+		int					raw;
 		static const int	bits;
 	public:	
 		Fixed(void);
 		~Fixed(void);
-		Fixed(Fixed const &from);
-		Fixed(int value);
-		Fixed(float value);
-		void 	operator=(Fixed const &from);
-		bool	operator>(Fixed const &other) const;
-		bool	operator>=(Fixed const &other) const;
-		bool	operator<(Fixed const &other) const;
-		bool	operator<=(Fixed const &other) const;
-		bool	operator==(Fixed const &other) const;
-		bool	operator!=(Fixed const &other) const;
-		Fixed	operator+(Fixed const &other) const;
-		Fixed	operator-(Fixed const &other) const;
-		Fixed	operator*(Fixed const &other) const;
-		Fixed	operator/(Fixed const &other) const;
+		Fixed(const Fixed& from);
+		Fixed(const int value);
+		Fixed(const float value);
+		void 	operator=(const Fixed& from);
+		bool	operator>(const Fixed& other) const;
+		bool	operator>=(const Fixed& other) const;
+		bool	operator<(const Fixed& other) const;
+		bool	operator<=(const Fixed& other) const;
+		bool	operator==(const Fixed& other) const;
+		bool	operator!=(const Fixed& other) const;
+		Fixed	operator+(const Fixed& other) const;
+		Fixed	operator-(const Fixed& other) const;
+		Fixed	operator*(const Fixed& other) const;
+		Fixed	operator/(const Fixed& other) const;
 		Fixed	&operator++(void);
 		Fixed	operator++(int);
 		Fixed	&operator--(void);
 		Fixed	operator--(int);
 		Fixed	operator-(void) const;
 		int		getRawBits(void) const;
-		void	setRawBits(int value);
+		void	setRawBits(const int raw);
 		int		toInt(void) const;
 		float	toFloat(void) const;
-		static Fixed const	&max(Fixed const &a, Fixed const &b);
-		static Fixed const	&min(Fixed const &a, Fixed const &b);
+		static Fixed const	&max(const Fixed& a, const Fixed& b);
+		static Fixed const	&min(const Fixed& a, const Fixed& b);
 		static Fixed	&max(Fixed &a, Fixed &b);
 		static Fixed	&min(Fixed &a, Fixed &b);
 };
 
-std::ostream&	operator<<(std::ostream& os, Fixed const &it);
+std::ostream&	operator<<(std::ostream& os, const Fixed& it);
