@@ -10,8 +10,8 @@ OUTPUT = ${INPUT:.cpp=.o}
 
 all: ${NAME}
 
-.c.o:	
-	c++ -Wall -Wextra -Werror -std=c++98 -g -c $< -o ${<:.c=.o}
+%.o: %.cpp
+	c++ -Wall -Wextra -Werror -std=c++98 -g -c $< -o $@
 
 ${NAME}: ${OUTPUT}
 	c++ -Wall -Wextra -Werror -std=c++98 -g ${OUTPUT} -o ${NAME}
