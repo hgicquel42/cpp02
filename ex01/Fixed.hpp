@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:42:58 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 12:21:43 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:18:14 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Fixed
 		Fixed(void);
 		~Fixed(void);
 		Fixed(Fixed const &from);
-		Fixed(int value);
-		Fixed(float value);
+		Fixed(const int value);
+		Fixed(const float value);
 		void 	operator=(Fixed const &from);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
