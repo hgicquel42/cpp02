@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:47:36 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 13:45:06 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:35:52 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ float	Fixed::toFloat(void) const
 	return ((float) this->raw / (float) (1 << this->bits));
 }
 
-void	Fixed::operator=(const Fixed& from)
+Fixed&	Fixed::operator=(const Fixed& from)
 {
 	this->raw = from.getRawBits();
+	return (*this);
 }
 
 bool	Fixed::operator==(const Fixed& other) const

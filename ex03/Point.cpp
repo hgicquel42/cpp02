@@ -6,11 +6,12 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:39:41 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 15:10:30 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:24:33 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
+#include <algorithm>
 
 Point::Point(void)
 {}
@@ -28,9 +29,11 @@ Point::Point(const Point& from):
 	y(from.getY())
 {}
 
-const Point&	Point::operator=(const Point& from)
+Point&	Point::operator=(const Point& from)
 {
-	return (from);
+	const_cast<Fixed&>(this->x) = from.getX();
+	const_cast<Fixed&>(this->y) = from.getY();
+	return (*this);
 }
 
 const Fixed&	Point::getX(void) const

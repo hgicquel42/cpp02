@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:47:36 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 13:30:06 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:34:01 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ Fixed::Fixed(const Fixed& from)
 	(*this) = from;
 }
 
-void Fixed::operator=(const Fixed& from)
+Fixed& Fixed::operator=(const Fixed& from)
 {
 	std::cout << "Assignation operator called" << "\n";
 	this->raw = from.getRawBits();
+	return (*this);
 }
 
 int	Fixed::getRawBits(void) const

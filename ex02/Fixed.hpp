@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:42:58 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 13:35:20 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:35:48 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Fixed
 		Fixed(const Fixed& from);
 		Fixed(const int value);
 		Fixed(const float value);
-		void 	operator=(const Fixed& from);
+		Fixed& 	operator=(const Fixed& from);
 		bool	operator>(const Fixed& other) const;
 		bool	operator>=(const Fixed& other) const;
 		bool	operator<(const Fixed& other) const;
