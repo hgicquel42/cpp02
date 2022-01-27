@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:55:37 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 13:49:40 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:08:56 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int	main(void)
 
 	std::cout << "D" << d << " = " << (bsp(a, b, c, d) ? "true" : "false") << "\n";
 	std::cout << "E" << e << " = " << (bsp(a, b, c, e) ? "true" : "false") << "\n";
-	std::cout << "C" << c << " = " << (bsp(a, b, c, c) ? "true" : "false") << "\n";
 	return (0);
 }
